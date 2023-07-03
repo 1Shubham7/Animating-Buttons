@@ -4,6 +4,7 @@
   align-items: center;
   padding: 20px 100px;
   z-index: 1;
+  overflow-x: hidden;
 }
 .navlist {
   display: flex;
@@ -78,7 +79,7 @@
   background-position: right center;
   text-decoration: none;
 }
-.github {
+.navbar.navbar-dark .github {
   all: unset;
   transition: all 0.3s ease-in-out;
   background-color: #21252c;
@@ -90,8 +91,23 @@
   text-decoration: none;
   gap: 7px;
 }
-.github:hover {
+.navbar.navbar-light .github {
+  all: unset;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+  border-radius: 12px;
+  padding: 12px 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+  gap: 7px;
+}
+.navbar.navbar-dark .github:hover {
   background-color: #232b32;
+}
+.navbar.navbar-light .github:hover {
+  background-color: cyan;
 }
 
 .image_container,
@@ -113,7 +129,6 @@
   border-radius: 100%;
   margin-right: 2rem;
 }
-.username,
 .addbtn {
   transition: all 0.3s ease-in-out;
   text-decoration: none;
@@ -123,20 +138,10 @@
   text-shadow: 0px 4px 4px 0px #00000040;
   filter: drop-shadow(0px 4px 1px rgba(255, 255, 255, 0.25));
 }
-.navbar.navbar-light .github .username {
-  color: black;
-  transition: all 0.3s ease-in-out;
+.addbtn {
+  margin-left: 3px;
 }
-
-.navbar.navbar-light .github:hover {
-  background: #00CCCC;
-  transition: all 0.3s ease-in-out;
-}
-.navbar.navbar-light .github {
-  background: white;
-  transition: all 0.3s ease-in-out;
-}
-.navbar.navbar-light .github .image_container {
+.navbar.navbar-light .github:hover .username {
   color: black;
   transition: all 0.3s ease-in-out;
 }
